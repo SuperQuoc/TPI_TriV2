@@ -40,7 +40,7 @@ namespace TPI_TriV2._View
             Rectangles = Rectangles.OrderBy(a => rnd.Next()).ToList();
 
             Paint += DrawMyRectangle;
-            
+
 
         }
 
@@ -48,33 +48,31 @@ namespace TPI_TriV2._View
         public void DrawMyRectangle(object sender, PaintEventArgs e)
         {
 
-            if (Rectangles != null)
+            int xPos = 0;
+            foreach (myRectangle rectangle in Rectangles)
             {
-                int xPos = 0;
-                foreach (myRectangle rectangle in Rectangles)
+                using (Font font = new Font("Arial", 12, FontStyle.Bold, GraphicsUnit.Point))
                 {
-                    using (Font font = new Font("Arial", 12, FontStyle.Bold, GraphicsUnit.Point))
-                    {
-                        // Create rectangle.
-                        Rectangle rect = new Rectangle(xPos, 0, 30, rectangle.CurrentSize * 20);
+                    // Create rectangle.
+                    Rectangle rect = new Rectangle(xPos, 0, 30, rectangle.CurrentSize * 20);
 
-                        // Create a StringFormat object with the each line of text, and the block
-                        // of text centered on the page.
-                        StringFormat stringFormat = new StringFormat();
-                        stringFormat.Alignment = StringAlignment.Center;
-                        stringFormat.LineAlignment = StringAlignment.Center;
+                    // Create a StringFormat object with the each line of text, and the block
+                    // of text centered on the page.
+                    StringFormat stringFormat = new StringFormat();
+                    stringFormat.Alignment = StringAlignment.Center;
+                    stringFormat.LineAlignment = StringAlignment.Center;
 
-                        
 
-                        // Draw rectangle to screen.
-                        e.Graphics.FillRectangle(new SolidBrush(rectangle.CurrentColor), rect);
 
-                        e.Graphics.DrawString(Convert.ToString(rectangle.CurrentSize), font, Brushes.White, rect, stringFormat);
-                        xPos += 40;
-                    }
+                    // Draw rectangle to screen.
+                    e.Graphics.FillRectangle(new SolidBrush(rectangle.CurrentColor), rect);
+
+                    e.Graphics.DrawString(Convert.ToString(rectangle.CurrentSize), font, Brushes.White, rect, stringFormat);
+                    xPos += 40;
                 }
-
             }
+
+
 
         }
 
