@@ -33,15 +33,15 @@ namespace TPI_TriV2._View
                         continue;
                     }
 
-                        
                 }
                 Rectangles.Add(new Rectangle(Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256)), i));
-
-
             }
+
+            Rectangles.OrderBy(a => rnd.Next()).ToList();
 
 
         }
+
 
 
     }
