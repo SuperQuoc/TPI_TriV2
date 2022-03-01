@@ -16,6 +16,7 @@ namespace TPI_TriV2._Controller
         public Controller(ISorting view)
         {
             sortView = view;
+
         }
 
         public void SortInput()

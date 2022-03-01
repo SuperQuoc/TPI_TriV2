@@ -12,7 +12,6 @@ namespace TPI_TriV2._View
         String PseudoCode { get; set;  }
         int SpeedSort { get; }
         String SortingMethod { get; set; }
-
         DisplaySorting Output { get; set; }
 
 
