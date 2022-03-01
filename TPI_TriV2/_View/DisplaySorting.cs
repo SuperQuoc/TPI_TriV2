@@ -20,6 +20,7 @@ namespace TPI_TriV2._View
 
         public DisplaySorting()
         {
+            //Itiliatize all the random rectangle
             for (int i = 1; i < _maxRectangle; i++)
             {
                 Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
@@ -36,11 +37,12 @@ namespace TPI_TriV2._View
                 }
                 Rectangles.Add(new Rectangle(Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256)), i));
             }
-
             Rectangles.OrderBy(a => rnd.Next()).ToList();
 
 
         }
+
+
 
 
 
