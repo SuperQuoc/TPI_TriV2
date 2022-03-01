@@ -10,42 +10,75 @@ namespace TPI_TriV2._View
 {
     public class DisplaySorting : PictureBox
     {
-        private int _maxRectangle = 20;
+        private const int MAXRECTANGLE = 20;
 
         private Random rnd = new Random();
 
-        private List<_View.Rectangle> _rectangles = new List<_View.Rectangle>();
-
-        public List<Rectangle> Rectangles { get => _rectangles; set => _rectangles = value; }
+        public List<myRectangle> Rectangles;
 
         public DisplaySorting()
         {
-            //Itiliatize all the random rectangle
-            for (int i = 1; i < _maxRectangle; i++)
+            //Initialize Rectangle
+            Rectangles = new List<myRectangle>();
+            //Initialize all the random rectangle
+            for (int i = 1; i <= MAXRECTANGLE; i++)
             {
                 Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
                 // Check if color already exist in our list of rectangle
-                foreach (Rectangle rectangle in Rectangles)
+                foreach (myRectangle rectangle in Rectangles)
                 {
 
-                    if(rectangle.CurrentColor == randomColor )
+                    if (rectangle.CurrentColor == randomColor)
                     {
-                        i-=1;
+                        i -= 1;
                         continue;
                     }
 
                 }
-                Rectangles.Add(new Rectangle(Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256)), i));
+                Rectangles.Add(new myRectangle(Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256)), i));
             }
-            Rectangles.OrderBy(a => rnd.Next()).ToList();
+            Rectangles = Rectangles.OrderBy(a => rnd.Next()).ToList();
 
+            Paint += DrawMyRectangle;
+            Invalidate();
 
         }
 
-        public void DrawRectangle()
+
+        public void DrawMyRectangle(object sender, PaintEventArgs e)
         {
 
+            if (Rectangles != null)
+            {
+                int xPos = 0;
+                foreach (myRectangle rectangle in Rectangles)
+                {
+                    using (Font font = new Font("Arial", 12, FontStyle.Bold, GraphicsUnit.Point))
+                    {
+                        // Create rectangle.
+                        Rectangle rect = new Rectangle(xPos, 0, 30, rectangle.CurrentSize * 20);
+
+                        // Create a StringFormat object with the each line of text, and the block
+                        // of text centered on the page.
+                        StringFormat stringFormat = new StringFormat();
+                        stringFormat.Alignment = StringAlignment.Center;
+                        stringFormat.LineAlignment = StringAlignment.Center;
+
+                        
+
+                        // Draw rectangle to screen.
+                        e.Graphics.FillRectangle(new SolidBrush(rectangle.CurrentColor), rect);
+
+                        e.Graphics.DrawString(Convert.ToString(rectangle.CurrentSize), font, Brushes.White, rect, stringFormat);
+                        xPos += 20;
+                    }
+                }
+
+            }
+
         }
+
+
 
 
 

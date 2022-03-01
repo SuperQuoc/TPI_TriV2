@@ -7,13 +7,12 @@ using System.Threading.Tasks;
 
 namespace TPI_TriV2._View
 {
-    //
-    public class Rectangle
+    public class myRectangle
     {
         private Color _currentColor;
         private int _currentSize;
 
-        public Rectangle(Color currentColor, int currentSize)
+        public myRectangle(Color currentColor, int currentSize)
         {
             CurrentColor = currentColor;
             CurrentSize = currentSize;
