@@ -15,11 +15,12 @@ namespace TPI_TriV2
 {
     public partial class FrmMain : Form, ISorting
     {
-        private string currentMethod = "BulleSort";
+        private string currentMethod;
 
         public string PseudoCode
         {
             get { return lbxPseudoCode.Text; }
+            set { lbxPseudoCode.Text = value;}
         }
         public int SpeedSort
         {
@@ -40,6 +41,7 @@ namespace TPI_TriV2
         public string SortingMethod
         {
             get { return currentMethod; }
+            set { currentMethod = value; }
         }
 
         public DisplaySorting Output
@@ -48,14 +50,11 @@ namespace TPI_TriV2
             set { displaySorting = value; }
         }
 
-        public List<_View.Rectangle> Rectangles
-        {
-            get { return Output.Rectangles; }
-            set { Output.Rectangles = value; }
-        }
         public FrmMain()
         {
             InitializeComponent();
+            currentMethod = "BulleSort";
+            cbxSpeed.SelectedIndex = 3;
         }
 
         private void miBulle_Click(object sender, EventArgs e)

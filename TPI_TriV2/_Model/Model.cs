@@ -12,10 +12,11 @@ namespace TPI_TriV2._Model
 
         public string SortingMethod { get; set; }
 
-        public List<_View.Rectangle> Rectangles { get; set; }
+        public DisplaySorting Output { get; set; }
 
         public DisplaySorting sortRectangle()
         {
+
             return new DisplaySorting();
         }
 

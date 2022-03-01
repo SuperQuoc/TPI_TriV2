@@ -9,13 +9,12 @@ namespace TPI_TriV2._View
 {
     public interface ISorting
     {
-        String PseudoCode { get; }
+        String PseudoCode { get; set;  }
         int SpeedSort { get; }
-        String SortingMethod { get; }
+        String SortingMethod { get; set; }
 
         DisplaySorting Output { get; set; }
 
-        List<_View.Rectangle> Rectangles { get; set; }
 
     }
 }

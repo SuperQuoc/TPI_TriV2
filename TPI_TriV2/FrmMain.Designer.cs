@@ -41,7 +41,6 @@
             this.cbxSpeed = new System.Windows.Forms.ComboBox();
             this.btnSort = new System.Windows.Forms.Button();
             this.lbxPseudoCode = new System.Windows.Forms.ListBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.displaySorting = new TPI_TriV2._View.DisplaySorting();
             this.mainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.displaySorting)).BeginInit();
@@ -125,6 +124,12 @@
             // 
             this.cbxSpeed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSpeed.FormattingEnabled = true;
+            this.cbxSpeed.Items.AddRange(new object[] {
+            "Pas à pas",
+            "Tres lent",
+            "Lent",
+            "Normal",
+            "Rapide"});
             this.cbxSpeed.Location = new System.Drawing.Point(12, 343);
             this.cbxSpeed.Name = "cbxSpeed";
             this.cbxSpeed.Size = new System.Drawing.Size(121, 21);
@@ -194,7 +199,6 @@
         private System.Windows.Forms.ComboBox cbxSpeed;
         private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.ListBox lbxPseudoCode;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private _View.DisplaySorting displaySorting;
     }
 }
