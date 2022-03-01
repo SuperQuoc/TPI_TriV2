@@ -93,5 +93,10 @@ namespace TPI_TriV2
             About aboutbox = new About();
             aboutbox.ShowDialog();
         }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            Invalidate();
+        }
     }
 }

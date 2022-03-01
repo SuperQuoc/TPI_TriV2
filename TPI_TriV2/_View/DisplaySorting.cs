@@ -40,7 +40,7 @@ namespace TPI_TriV2._View
             Rectangles = Rectangles.OrderBy(a => rnd.Next()).ToList();
 
             Paint += DrawMyRectangle;
-            Invalidate();
+            
 
         }
 
@@ -70,7 +70,7 @@ namespace TPI_TriV2._View
                         e.Graphics.FillRectangle(new SolidBrush(rectangle.CurrentColor), rect);
 
                         e.Graphics.DrawString(Convert.ToString(rectangle.CurrentSize), font, Brushes.White, rect, stringFormat);
-                        xPos += 20;
+                        xPos += 40;
                     }
                 }
 
