@@ -102,7 +102,9 @@ namespace TPI_TriV2
         {
             Controller controller = new Controller(this);
             controller.SortInput();
-            Invalidate();
+
+            displaySorting.Paint += displaySorting.DrawMyRectangle;
+            displaySorting.Invalidate();
 
         }
     }
