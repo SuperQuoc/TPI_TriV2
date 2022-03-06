@@ -42,6 +42,7 @@
             this.btnSort = new System.Windows.Forms.Button();
             this.lbxPseudoCode = new System.Windows.Forms.ListBox();
             this.displaySorting = new TPI_TriV2._View.DisplaySorting();
+            this.btnRandomize = new System.Windows.Forms.Button();
             this.mainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.displaySorting)).BeginInit();
             this.SuspendLayout();
@@ -163,11 +164,22 @@
             this.displaySorting.TabIndex = 5;
             this.displaySorting.TabStop = false;
             // 
+            // btnRandomize
+            // 
+            this.btnRandomize.Location = new System.Drawing.Point(220, 450);
+            this.btnRandomize.Name = "btnRandomize";
+            this.btnRandomize.Size = new System.Drawing.Size(75, 23);
+            this.btnRandomize.TabIndex = 6;
+            this.btnRandomize.Text = "Randomize";
+            this.btnRandomize.UseVisualStyleBackColor = true;
+            this.btnRandomize.Click += new System.EventHandler(this.btnRandomize_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 676);
+            this.Controls.Add(this.btnRandomize);
             this.Controls.Add(this.displaySorting);
             this.Controls.Add(this.lbxPseudoCode);
             this.Controls.Add(this.btnSort);
@@ -201,6 +213,7 @@
         private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.ListBox lbxPseudoCode;
         private _View.DisplaySorting displaySorting;
+        private System.Windows.Forms.Button btnRandomize;
     }
 }
 

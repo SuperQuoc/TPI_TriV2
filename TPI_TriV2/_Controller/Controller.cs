@@ -27,6 +27,7 @@ namespace TPI_TriV2._Controller
             model.PseudoCode = sortView.PseudoCode;
             model.Rectangles = sortView.Rectangles;
             sortView.Output = model.sortRectangle();
+
         }
 
     }

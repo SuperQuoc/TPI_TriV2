@@ -107,9 +107,15 @@ namespace TPI_TriV2
         private void btnSort_Click(object sender, EventArgs e)
         {
             Controller controller = new Controller(this);
-            //controller.SortInput();
+            controller.SortInput();
 
-            displaySorting.Paint += displaySorting.DrawMyRectangle;
+        }
+
+        private void btnRandomize_Click(object sender, EventArgs e)
+        {
+
+            displaySorting.RandomizeRectangleList();
+
             displaySorting.Invalidate();
 
         }

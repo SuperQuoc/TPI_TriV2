@@ -22,6 +22,7 @@ namespace TPI_TriV2._Model
 
         public DisplaySorting sortRectangle()
         {
+
             DisplaySorting displaySorting = new DisplaySorting();
 
             return displaySorting;

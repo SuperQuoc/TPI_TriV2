@@ -75,6 +75,11 @@ namespace TPI_TriV2._View
 
         }
 
+        public void RandomizeRectangleList()
+        {
+            Rectangles = Rectangles.OrderBy(a => rnd.Next()).ToList();
+        }
+
 
 
 
