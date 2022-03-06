@@ -14,7 +14,9 @@ namespace TPI_TriV2._Model
 
         public int SpeedSort { get; set; }
 
-        public DisplaySorting Output { get; set; }
+        public List<myRectangle> Rectangles { get; set; }
+
+        public string PseudoCode { get; set; }
 
         public DisplaySorting sortRectangle()
         {

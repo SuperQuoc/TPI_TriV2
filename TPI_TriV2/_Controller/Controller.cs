@@ -24,7 +24,7 @@ namespace TPI_TriV2._Controller
             Model model = new Model();
             model.SpeedSort = sortView.SpeedSort;
             model.SortingMethod = sortView.SortingMethod;
-
+            model.PseudoCode = sortView.PseudoCode;
         }
 
     }
