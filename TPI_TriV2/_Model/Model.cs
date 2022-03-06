@@ -18,8 +18,8 @@ namespace TPI_TriV2._Model
 
         public DisplaySorting sortRectangle()
         {
-
-            return new DisplaySorting();
+            DisplaySorting displaySorting = new DisplaySorting();
+            return displaySorting;
         }
 
     }

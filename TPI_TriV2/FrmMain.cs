@@ -44,10 +44,10 @@ namespace TPI_TriV2
             set { currentMethod = value; }
         }
 
-        public DisplaySorting Output
+        public List<myRectangle> Rectangles
         {
-            get { return displaySorting; }
-            set { displaySorting = value; }
+            get { return displaySorting.Rectangles; }
+            set { displaySorting.Rectangles = value; }
         }
 
         public FrmMain()
@@ -102,6 +102,7 @@ namespace TPI_TriV2
         {
             Controller controller = new Controller(this);
             controller.SortInput();
+            Invalidate();
 
         }
     }

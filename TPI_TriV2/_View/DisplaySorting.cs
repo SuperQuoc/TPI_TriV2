@@ -40,7 +40,6 @@ namespace TPI_TriV2._View
             // Randomize the list of Rectangle
             Rectangles = Rectangles.OrderBy(a => rnd.Next()).ToList();
 
-
             // Draw all rectangle
             Paint += DrawMyRectangle;
 
@@ -74,9 +73,9 @@ namespace TPI_TriV2._View
                 }
             }
 
-
-
         }
+
+
 
 
 
