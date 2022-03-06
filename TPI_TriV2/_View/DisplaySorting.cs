@@ -38,10 +38,10 @@ namespace TPI_TriV2._View
                 Rectangles.Add(new myRectangle(Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256)), i));
             }
             // Randomize the list of Rectangle
-            Rectangles = Rectangles.OrderBy(a => rnd.Next()).ToList();
+            RandomizeRectangleList();
 
             // Draw all rectangle
-            Paint += DrawMyRectangle;
+            //Paint += DrawMyRectangle;
 
         }
 
