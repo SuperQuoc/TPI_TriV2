@@ -12,6 +12,8 @@ namespace TPI_TriV2._Model
 
         public string SortingMethod { get; set; }
 
+        public int SpeedSort { get; set; }
+
         public DisplaySorting Output { get; set; }
 
         public DisplaySorting sortRectangle()

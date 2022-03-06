@@ -84,8 +84,7 @@ namespace TPI_TriV2
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            Controller controller = new Controller(this);
-            controller.SortInput();
+
         }
 
         private void miAbout_Click(object sender, EventArgs e)
@@ -96,7 +95,14 @@ namespace TPI_TriV2
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            Invalidate();
+
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            Controller controller = new Controller(this);
+            controller.SortInput();
+
         }
     }
 }

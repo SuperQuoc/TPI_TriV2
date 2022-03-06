@@ -22,6 +22,7 @@ namespace TPI_TriV2._Controller
         public void SortInput()
         {
             Model model = new Model();
+            model.SpeedSort = sortView.SpeedSort;
             model.SortingMethod = sortView.SortingMethod;
             sortView.Output = model.sortRectangle();
         }
