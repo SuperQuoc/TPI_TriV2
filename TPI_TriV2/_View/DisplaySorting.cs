@@ -63,8 +63,6 @@ namespace TPI_TriV2._View
                     stringFormat.Alignment = StringAlignment.Center;
                     stringFormat.LineAlignment = StringAlignment.Center;
 
-
-
                     // Draw rectangle to screen.
                     e.Graphics.FillRectangle(new SolidBrush(rectangle.CurrentColor), rect);
 
@@ -79,14 +77,6 @@ namespace TPI_TriV2._View
         {
             Rectangles = Rectangles.OrderBy(a => rnd.Next()).ToList();
         }
-
-
-
-
-
-
-
-
 
     }
 }
