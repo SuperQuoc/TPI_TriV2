@@ -81,35 +81,35 @@
             // miBulle
             // 
             this.miBulle.Name = "miBulle";
-            this.miBulle.Size = new System.Drawing.Size(180, 22);
+            this.miBulle.Size = new System.Drawing.Size(122, 22);
             this.miBulle.Text = "Bulle";
             this.miBulle.Click += new System.EventHandler(this.miBulle_Click);
             // 
             // miSelection
             // 
             this.miSelection.Name = "miSelection";
-            this.miSelection.Size = new System.Drawing.Size(180, 22);
+            this.miSelection.Size = new System.Drawing.Size(122, 22);
             this.miSelection.Text = "Selection";
             this.miSelection.Click += new System.EventHandler(this.miSelection_Click);
             // 
             // miPeigne
             // 
             this.miPeigne.Name = "miPeigne";
-            this.miPeigne.Size = new System.Drawing.Size(180, 22);
+            this.miPeigne.Size = new System.Drawing.Size(122, 22);
             this.miPeigne.Text = "Peigne";
             this.miPeigne.Click += new System.EventHandler(this.miPeigne_Click);
             // 
             // miShell
             // 
             this.miShell.Name = "miShell";
-            this.miShell.Size = new System.Drawing.Size(180, 22);
+            this.miShell.Size = new System.Drawing.Size(122, 22);
             this.miShell.Text = "Shell";
             this.miShell.Click += new System.EventHandler(this.miShell_Click);
             // 
             // miInsertion
             // 
             this.miInsertion.Name = "miInsertion";
-            this.miInsertion.Size = new System.Drawing.Size(180, 22);
+            this.miInsertion.Size = new System.Drawing.Size(122, 22);
             this.miInsertion.Text = "Insertion";
             this.miInsertion.Click += new System.EventHandler(this.miInsertion_Click);
             // 
@@ -136,14 +136,14 @@
             "Lent",
             "Normal",
             "Rapide"});
-            this.cbxSpeed.Location = new System.Drawing.Point(12, 450);
+            this.cbxSpeed.Location = new System.Drawing.Point(12, 461);
             this.cbxSpeed.Name = "cbxSpeed";
             this.cbxSpeed.Size = new System.Drawing.Size(121, 21);
             this.cbxSpeed.TabIndex = 2;
             // 
             // btnSort
             // 
-            this.btnSort.Location = new System.Drawing.Point(139, 450);
+            this.btnSort.Location = new System.Drawing.Point(139, 461);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(75, 23);
             this.btnSort.TabIndex = 3;
@@ -155,14 +155,14 @@
             // 
             this.lbxPseudoCode.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbxPseudoCode.FormattingEnabled = true;
-            this.lbxPseudoCode.Location = new System.Drawing.Point(0, 477);
+            this.lbxPseudoCode.Location = new System.Drawing.Point(0, 488);
             this.lbxPseudoCode.Name = "lbxPseudoCode";
-            this.lbxPseudoCode.Size = new System.Drawing.Size(790, 199);
+            this.lbxPseudoCode.Size = new System.Drawing.Size(790, 225);
             this.lbxPseudoCode.TabIndex = 4;
             // 
             // btnRandomize
             // 
-            this.btnRandomize.Location = new System.Drawing.Point(220, 450);
+            this.btnRandomize.Location = new System.Drawing.Point(220, 461);
             this.btnRandomize.Name = "btnRandomize";
             this.btnRandomize.Size = new System.Drawing.Size(75, 23);
             this.btnRandomize.TabIndex = 6;
@@ -175,7 +175,7 @@
             this.displaySorting.Dock = System.Windows.Forms.DockStyle.Top;
             this.displaySorting.Location = new System.Drawing.Point(0, 24);
             this.displaySorting.Name = "displaySorting";
-            this.displaySorting.Size = new System.Drawing.Size(790, 420);
+            this.displaySorting.Size = new System.Drawing.Size(790, 431);
             this.displaySorting.TabIndex = 5;
             this.displaySorting.TabStop = false;
             // 
@@ -183,7 +183,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 676);
+            this.ClientSize = new System.Drawing.Size(790, 713);
             this.Controls.Add(this.btnRandomize);
             this.Controls.Add(this.displaySorting);
             this.Controls.Add(this.lbxPseudoCode);
