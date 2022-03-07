@@ -17,6 +17,8 @@ namespace TPI_TriV2
     {
         private string currentMethod;
 
+        Controller controller;
+
         public List<string> PseudoCode
         {
             get {
@@ -67,40 +69,42 @@ namespace TPI_TriV2
             InitializeComponent();
             currentMethod = "BulleSort";
             cbxSpeed.SelectedIndex = 3;
+            controller = new Controller(this);
+
         }
 
         private void miBulle_Click(object sender, EventArgs e)
         {
             currentMethod = "BulleSort";
-            Controller controller = new Controller(this);
+
             controller.UpdatePseudoCode();
         }
 
         private void miSelection_Click(object sender, EventArgs e)
         {
             currentMethod = "SelectionSort";
-            Controller controller = new Controller(this);
+
             controller.UpdatePseudoCode();
         }
 
         private void miPeigne_Click(object sender, EventArgs e)
         {
             currentMethod = "PeigneSort";
-            Controller controller = new Controller(this);
+
             controller.UpdatePseudoCode();
         }
 
         private void miShell_Click(object sender, EventArgs e)
         {
             currentMethod = "ShellSort";
-            Controller controller = new Controller(this);
+
             controller.UpdatePseudoCode();
         }
 
         private void miInsertion_Click(object sender, EventArgs e)
         {
             currentMethod = "InsertionSort";
-            Controller controller = new Controller(this);
+
             controller.UpdatePseudoCode();
         }
 
@@ -117,14 +121,14 @@ namespace TPI_TriV2
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            Controller controller = new Controller(this);
+
             controller.UpdatePseudoCode();
         }
 
         private void btnSort_Click(object sender, EventArgs e)
         {
             
-            Controller controller = new Controller(this);
+
             controller.SortInput();
 
 
