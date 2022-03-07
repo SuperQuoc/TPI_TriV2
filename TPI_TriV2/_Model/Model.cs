@@ -107,23 +107,28 @@ namespace TPI_TriV2._Model
 
         public List<myRectangle> BulleSortMethod()
         {
+
             return new List<myRectangle>();
         }
 
         public List<myRectangle> SelectionSortMethod()
         {
+
             return new List<myRectangle>();
         }
         public List<myRectangle> PeigneSortMethod()
         {
+
             return new List<myRectangle>();
         }
         public List<myRectangle> ShellSortMethod()
         {
+
             return new List<myRectangle>();
         }
         public List<myRectangle> InsertionSortMethod()
         {
+
             return new List<myRectangle>();
         }
 
