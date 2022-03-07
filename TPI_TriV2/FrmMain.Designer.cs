@@ -41,8 +41,8 @@
             this.cbxSpeed = new System.Windows.Forms.ComboBox();
             this.btnSort = new System.Windows.Forms.Button();
             this.lbxPseudoCode = new System.Windows.Forms.ListBox();
-            this.displaySorting = new TPI_TriV2._View.DisplaySorting();
             this.btnRandomize = new System.Windows.Forms.Button();
+            this.displaySorting = new TPI_TriV2._View.DisplaySorting();
             this.mainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.displaySorting)).BeginInit();
             this.SuspendLayout();
@@ -81,32 +81,37 @@
             // miBulle
             // 
             this.miBulle.Name = "miBulle";
-            this.miBulle.Size = new System.Drawing.Size(122, 22);
+            this.miBulle.Size = new System.Drawing.Size(180, 22);
             this.miBulle.Text = "Bulle";
+            this.miBulle.Click += new System.EventHandler(this.miBulle_Click);
             // 
             // miSelection
             // 
             this.miSelection.Name = "miSelection";
-            this.miSelection.Size = new System.Drawing.Size(122, 22);
+            this.miSelection.Size = new System.Drawing.Size(180, 22);
             this.miSelection.Text = "Selection";
+            this.miSelection.Click += new System.EventHandler(this.miSelection_Click);
             // 
             // miPeigne
             // 
             this.miPeigne.Name = "miPeigne";
-            this.miPeigne.Size = new System.Drawing.Size(122, 22);
+            this.miPeigne.Size = new System.Drawing.Size(180, 22);
             this.miPeigne.Text = "Peigne";
+            this.miPeigne.Click += new System.EventHandler(this.miPeigne_Click);
             // 
             // miShell
             // 
             this.miShell.Name = "miShell";
-            this.miShell.Size = new System.Drawing.Size(122, 22);
+            this.miShell.Size = new System.Drawing.Size(180, 22);
             this.miShell.Text = "Shell";
+            this.miShell.Click += new System.EventHandler(this.miShell_Click);
             // 
             // miInsertion
             // 
             this.miInsertion.Name = "miInsertion";
-            this.miInsertion.Size = new System.Drawing.Size(122, 22);
+            this.miInsertion.Size = new System.Drawing.Size(180, 22);
             this.miInsertion.Text = "Insertion";
+            this.miInsertion.Click += new System.EventHandler(this.miInsertion_Click);
             // 
             // miHelp
             // 
@@ -155,15 +160,6 @@
             this.lbxPseudoCode.Size = new System.Drawing.Size(790, 199);
             this.lbxPseudoCode.TabIndex = 4;
             // 
-            // displaySorting
-            // 
-            this.displaySorting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.displaySorting.Location = new System.Drawing.Point(0, 24);
-            this.displaySorting.Name = "displaySorting";
-            this.displaySorting.Size = new System.Drawing.Size(790, 420);
-            this.displaySorting.TabIndex = 5;
-            this.displaySorting.TabStop = false;
-            // 
             // btnRandomize
             // 
             this.btnRandomize.Location = new System.Drawing.Point(220, 450);
@@ -173,6 +169,15 @@
             this.btnRandomize.Text = "Randomize";
             this.btnRandomize.UseVisualStyleBackColor = true;
             this.btnRandomize.Click += new System.EventHandler(this.btnRandomize_Click);
+            // 
+            // displaySorting
+            // 
+            this.displaySorting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.displaySorting.Location = new System.Drawing.Point(0, 24);
+            this.displaySorting.Name = "displaySorting";
+            this.displaySorting.Size = new System.Drawing.Size(790, 420);
+            this.displaySorting.TabIndex = 5;
+            this.displaySorting.TabStop = false;
             // 
             // FrmMain
             // 

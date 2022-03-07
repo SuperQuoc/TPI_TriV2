@@ -17,10 +17,22 @@ namespace TPI_TriV2
     {
         private string currentMethod;
 
-        public string PseudoCode
+        public List<string> PseudoCode
         {
-            get { return lbxPseudoCode.Text; }
-            set { lbxPseudoCode.Text = value;}
+            get {
+                List<string> myListPseudoCode = new List<string>();
+                foreach (string s in lbxPseudoCode.Items)
+                {
+                    myListPseudoCode.Add(s);
+                }
+                return myListPseudoCode; }
+            set { 
+                lbxPseudoCode.Items.Clear();
+                foreach(string s in value)
+                {
+                    lbxPseudoCode.Items.Add(s);
+                }
+                }
         }
         public int SpeedSort
         {
@@ -105,6 +117,8 @@ namespace TPI_TriV2
             controller.SortInput();
 
 
+
+
         }
 
         private void btnRandomize_Click(object sender, EventArgs e)
@@ -115,5 +129,6 @@ namespace TPI_TriV2
             displaySorting.Invalidate();
 
         }
+
     }
 }
