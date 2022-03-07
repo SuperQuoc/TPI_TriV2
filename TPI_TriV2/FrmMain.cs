@@ -17,10 +17,24 @@ namespace TPI_TriV2
     {
         private string currentMethod;
 
-        public string PseudoCode
+        Controller controller;
+
+        public List<string> PseudoCode
         {
-            get { return lbxPseudoCode.Text; }
-            set { lbxPseudoCode.Text = value;}
+            get {
+                List<string> myListPseudoCode = new List<string>();
+                foreach (string s in lbxPseudoCode.Items)
+                {
+                    myListPseudoCode.Add(s);
+                }
+                return myListPseudoCode; }
+            set { 
+                lbxPseudoCode.Items.Clear();
+                foreach(string s in value)
+                {
+                    lbxPseudoCode.Items.Add(s);
+                }
+                }
         }
         public int SpeedSort
         {
@@ -44,12 +58,6 @@ namespace TPI_TriV2
             set { currentMethod = value; }
         }
 
-        public DisplaySorting Output
-        {
-            get { return displaySorting; }
-            set { displaySorting = value; }
-        }
-
         public List<myRectangle> Rectangles
         {
             get { return displaySorting.Rectangles; }
@@ -58,34 +66,47 @@ namespace TPI_TriV2
 
         public FrmMain()
         {
+            //Initialize and default value
             InitializeComponent();
             currentMethod = "BulleSort";
             cbxSpeed.SelectedIndex = 3;
+            controller = new Controller(this);
+
         }
 
         private void miBulle_Click(object sender, EventArgs e)
         {
             currentMethod = "BulleSort";
+
+            controller.UpdatePseudoCode();
         }
 
         private void miSelection_Click(object sender, EventArgs e)
         {
             currentMethod = "SelectionSort";
+
+            controller.UpdatePseudoCode();
         }
 
         private void miPeigne_Click(object sender, EventArgs e)
         {
             currentMethod = "PeigneSort";
+
+            controller.UpdatePseudoCode();
         }
 
         private void miShell_Click(object sender, EventArgs e)
         {
             currentMethod = "ShellSort";
+
+            controller.UpdatePseudoCode();
         }
 
         private void miInsertion_Click(object sender, EventArgs e)
         {
             currentMethod = "InsertionSort";
+
+            controller.UpdatePseudoCode();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -102,23 +123,30 @@ namespace TPI_TriV2
         private void FrmMain_Load(object sender, EventArgs e)
         {
 
+            controller.UpdatePseudoCode();
         }
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            Controller controller = new Controller(this);
+            
             controller.SortInput();
-            displaySorting.Paint += displaySorting.DrawMyRectangle;
-            displaySorting.Invalidate();
+
+            updateDisplaySorting();
         }
 
         private void btnRandomize_Click(object sender, EventArgs e)
         {
 
             displaySorting.RandomizeRectangleList();
-            displaySorting.Paint += displaySorting.DrawMyRectangle;
-            displaySorting.Invalidate();
+            updateDisplaySorting();
 
         }
+
+        public void updateDisplaySorting()
+        {
+            //displaySorting.Paint += displaySorting.DrawMyRectangle;
+            displaySorting.Invalidate();
+        }
+
     }
 }

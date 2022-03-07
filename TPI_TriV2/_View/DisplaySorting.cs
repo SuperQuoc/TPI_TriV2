@@ -41,7 +41,7 @@ namespace TPI_TriV2._View
             RandomizeRectangleList();
 
             // Draw all rectangle
-            //Paint += DrawMyRectangle;
+            Paint += DrawMyRectangle;
 
         }
 
