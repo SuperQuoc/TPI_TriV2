@@ -13,30 +13,29 @@ namespace TPI_TriV2._Controller
     {
         private readonly ISorting sortView;
 
+        private Model model;
+
 
         public Controller(ISorting view)
         {
             sortView = view;
+            model = new Model();
         }
 
         public void SortInput()
         {
-            Model model = new Model();
+
             model.SpeedSort = sortView.SpeedSort;
             model.SortingMethod = sortView.SortingMethod;
             model.PseudoCode = sortView.PseudoCode;
             model.Rectangles = sortView.Rectangles;
 
-            
-            sortView.PseudoCode = model.GetPseudoCode();
-
-
+            sortView.Rectangles = model.
 
         }
 
         public void UpdatePseudoCode()
         {
-            Model model = new Model();
             model.SortingMethod = sortView.SortingMethod;
             sortView.PseudoCode = model.GetPseudoCode();
         }

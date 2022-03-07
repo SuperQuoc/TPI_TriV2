@@ -66,6 +66,7 @@ namespace TPI_TriV2
 
         public FrmMain()
         {
+            //Initialize and default value
             InitializeComponent();
             currentMethod = "BulleSort";
             cbxSpeed.SelectedIndex = 3;
@@ -128,21 +129,23 @@ namespace TPI_TriV2
         private void btnSort_Click(object sender, EventArgs e)
         {
             
-
             controller.SortInput();
 
-
-
-
+            updateDisplaySorting();
         }
 
         private void btnRandomize_Click(object sender, EventArgs e)
         {
 
             displaySorting.RandomizeRectangleList();
-            displaySorting.Paint += displaySorting.DrawMyRectangle;
-            displaySorting.Invalidate();
+            updateDisplaySorting();
 
+        }
+
+        public void updateDisplaySorting()
+        {
+            //displaySorting.Paint += displaySorting.DrawMyRectangle;
+            displaySorting.Invalidate();
         }
 
     }

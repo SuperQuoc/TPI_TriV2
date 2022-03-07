@@ -82,5 +82,52 @@ namespace TPI_TriV2._Model
             }
         }
 
+        public List<myRectangle> SortRectangle()
+        {
+            switch (SortingMethod)
+            {
+                case "BulleSort":
+
+                    return BulleSortMethod();
+                case "SelectionSort":
+
+                    return SelectionSortMethod();
+                case "PeigneSort":
+
+                    return PeigneSortMethod();
+                case "ShellSort":
+
+                    return ShellSortMethod();
+                case "InsertionSort":
+
+                    return InsertionSortMethod();
+                default: return new List<myRectangle>();
+            }
+        }
+
+        public List<myRectangle> BulleSortMethod()
+        {
+            return new List<myRectangle>();
+        }
+
+        public List<myRectangle> SelectionSortMethod()
+        {
+            return new List<myRectangle>();
+        }
+        public List<myRectangle> PeigneSortMethod()
+        {
+            return new List<myRectangle>();
+        }
+        public List<myRectangle> ShellSortMethod()
+        {
+            return new List<myRectangle>();
+        }
+        public List<myRectangle> InsertionSortMethod()
+        {
+            return new List<myRectangle>();
+        }
+
+
+
     }
 }
