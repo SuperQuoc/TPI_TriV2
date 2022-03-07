@@ -72,26 +72,36 @@ namespace TPI_TriV2
         private void miBulle_Click(object sender, EventArgs e)
         {
             currentMethod = "BulleSort";
+            Controller controller = new Controller(this);
+            controller.UpdatePseudoCode();
         }
 
         private void miSelection_Click(object sender, EventArgs e)
         {
             currentMethod = "SelectionSort";
+            Controller controller = new Controller(this);
+            controller.UpdatePseudoCode();
         }
 
         private void miPeigne_Click(object sender, EventArgs e)
         {
             currentMethod = "PeigneSort";
+            Controller controller = new Controller(this);
+            controller.UpdatePseudoCode();
         }
 
         private void miShell_Click(object sender, EventArgs e)
         {
             currentMethod = "ShellSort";
+            Controller controller = new Controller(this);
+            controller.UpdatePseudoCode();
         }
 
         private void miInsertion_Click(object sender, EventArgs e)
         {
             currentMethod = "InsertionSort";
+            Controller controller = new Controller(this);
+            controller.UpdatePseudoCode();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -107,7 +117,8 @@ namespace TPI_TriV2
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-
+            Controller controller = new Controller(this);
+            controller.UpdatePseudoCode();
         }
 
         private void btnSort_Click(object sender, EventArgs e)

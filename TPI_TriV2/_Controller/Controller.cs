@@ -34,5 +34,12 @@ namespace TPI_TriV2._Controller
 
         }
 
+        public void UpdatePseudoCode()
+        {
+            Model model = new Model();
+            model.SortingMethod = sortView.SortingMethod;
+            sortView.PseudoCode = model.GetPseudoCode();
+        }
+
     }
 }
