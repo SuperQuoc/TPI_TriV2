@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TPI_TriV2._Model;
 using TPI_TriV2._View;
+using System.Windows.Forms;
 
 namespace TPI_TriV2._Controller
 {
@@ -16,7 +17,6 @@ namespace TPI_TriV2._Controller
         public Controller(ISorting view)
         {
             sortView = view;
-
         }
 
         public void SortInput()
@@ -27,7 +27,6 @@ namespace TPI_TriV2._Controller
             model.PseudoCode = sortView.PseudoCode;
             model.Rectangles = sortView.Rectangles;
 
-            sortView.Output = new DisplaySorting();
 
 
         }
