@@ -115,10 +115,20 @@ namespace TPI_TriV2._Model
             {
                 permutation = false;
                 passage++;
-                for
+                for (int i = 0; i < 20-passage; i++)
+                {
+                    if (Rectangles[i].CurrentSize > Rectangles[i+1].CurrentSize)
+                    {
+                        permutation = true;
+
+                        int temp = Rectangles[i].CurrentSize;
+                        Rectangles[i].CurrentSize = Rectangles[i+1].CurrentSize;
+                        Rectangles[i + 1].CurrentSize = temp;
+                    }
+                }
             }
 
-            return new List<myRectangle>();
+            return rectangleToSort;
         }
 
         public List<myRectangle> SelectionSortMethod()
