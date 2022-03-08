@@ -107,6 +107,16 @@ namespace TPI_TriV2._Model
 
         public List<myRectangle> BulleSortMethod()
         {
+            List<myRectangle> rectangleToSort = Rectangles;
+            bool permutation = true;
+            int passage = 0;
+
+            while(permutation == true)
+            {
+                permutation = false;
+                passage++;
+                for
+            }
 
             return new List<myRectangle>();
         }

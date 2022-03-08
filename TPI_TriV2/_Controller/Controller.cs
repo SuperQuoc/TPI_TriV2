@@ -30,7 +30,7 @@ namespace TPI_TriV2._Controller
             model.PseudoCode = sortView.PseudoCode;
             model.Rectangles = sortView.Rectangles;
 
-            sortView.Rectangles = model.
+            sortView.Rectangles = model.SortRectangle();
 
         }
 
