@@ -20,5 +20,6 @@ namespace TPI_TriV2._View
 
         public Color CurrentColor { get => _currentColor; set => _currentColor = value; }
         public int CurrentSize { get => _currentSize; set => _currentSize = value; }
+
     }
 }

@@ -122,7 +122,6 @@ namespace TPI_TriV2
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-
             controller.UpdatePseudoCode();
         }
 
@@ -144,7 +143,6 @@ namespace TPI_TriV2
 
         public void updateDisplaySorting()
         {
-            //displaySorting.Paint += displaySorting.DrawMyRectangle;
             displaySorting.Invalidate();
         }
 
