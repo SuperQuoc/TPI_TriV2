@@ -110,7 +110,7 @@ namespace TPI_TriV2._Model
             List<myRectangle> rectangleToSort = Rectangles;
             bool permutation = true;
             int passage = 0;
-
+            
             while(permutation == true)
             {
                 permutation = false;
